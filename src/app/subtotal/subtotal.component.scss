@@ -1,0 +1,11 @@
+.subtotalSummary{
+    p{
+        font-size: 2em;
+        text-align: center;
+        color:black;
+        font-weight: bold;
+    &:nth-child(2){
+        color: green;
+    }    
+    }
+}

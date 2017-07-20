@@ -1,0 +1,23 @@
+      <h4>New Finacial Goal</h4>
+      <div class="input-area row">
+        <form >
+          <div class="input-field col s6">
+            <input [(ngModel)]= "goalTitle"  name="goalTitle" id="goal" type="text" class="validate">
+            <label for="goal">Goal</label>
+          </div>
+          <div class="input-field col s3">
+            <input [(ngModel)]= "goalAmount" name="goalAmount" id="price" type="number" class="validate">
+            <label for="Price">Price</label>
+          </div>
+          <div  class="input-field col s2">
+            <form action="/action_page.php">
+              <input [(ngModel)]= "goalDate" name="goalDate" type="date" name="bday">
+          </form>
+          </div>
+          <div class="input-field col s1">
+            <button (click)="addGoal()"  type="submit" class="btn-floating "><i class="fa fa-plus" aria-hidden="true"></i></button>
+          </div>
+        </form>
+
+      </div>
+          

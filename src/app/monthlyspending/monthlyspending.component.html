@@ -1,0 +1,45 @@
+<div class="goal-container">  
+  <h4>Monthly Budget</h4>
+  <div class="budgetListContainer">
+        <table class="centered" >
+          <tbody *ngFor="let budget of budgets">
+            <tr>
+              <td>{{budget.budgetTitle}}</td>
+              <td class="budget-output budget-amount">{{budget.budgetAmount}}</td>
+            </tr>
+          </tbody>
+      </table>
+  </div>
+
+  <div id="budgetSummary" *ngIf="monthlySpendingServ.budgets?.length > 0" class="budgetSummary row">
+    <p class="col s6">Total</p>
+    <p class="col s6">${{monthlyBudgetTotal}}</p>
+  </div>
+<!--submit Buget-->
+  <a class="addBudgetBtn waves-effect waves-light btn" href="#modal1">Add</a> 
+</div>
+
+  <!-- Modal Structure -->
+  <form  #form="ngForm" (ngSubmit)="addBudget(form.value)">
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <div class="row">
+        <div class="input-field col s12">
+         <input [(ngModel)]="budgets.budgetTitle" name="budgetTitle" id="budgetTitle" type="text" class="validate">
+          <label for="budgetItem">Title</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input [(ngModel)]="budgets.budgetAmount" name="budgetAmount" id="budgetAmount" type="number" class="validate">
+          <label for="payable">Amount</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-footer">
+      <button [disabled]="buttonStatus" type="submit" class="modal-action modal-close waves-effect waves-green btn-flat">Done</button>
+    </div>
+  </div>
+  </form>
+   <!--add button pop up modal -->

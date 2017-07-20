@@ -1,0 +1,35 @@
+h4{text-align: center;}
+.budget-output{
+    width: 50%;
+    display: inline;
+    float: left;
+}    
+.budget-title{
+    font-size: 1.2em;
+}
+.budget-amount{
+    text-align: center;
+    color: #56a656;
+}
+.budgetSummary{
+    p{
+        font-size: 2em;
+        text-align: center;
+        color:black;
+        font-weight: bold;
+    &:nth-child(2){
+        color: green;
+    }    
+    }
+}
+.addBudgetBtn{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.budgetListContainer{
+    max-height: 400px;      
+    overflow: auto;
+    background: white;
+    box-shadow: #e1e0e0 0px 3px 0px 0px;
+    border: solid 1px #f4efef;
+}

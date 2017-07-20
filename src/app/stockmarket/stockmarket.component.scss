@@ -1,0 +1,28 @@
+.stock-market{
+        border: solid 1px lightgray;
+        padding: 1em;
+        border-radius: 3px;
+        margin: 0 2px;
+        p{
+            margin: 0;
+        }
+    .stock-name{
+        color: #5580c8;
+        text-align: center;
+    }
+    .stock-symbol{
+        font-size: 2em;
+    }
+    .stock-value{
+        font-size: 2em;
+        font-weight: 500;
+    }
+    .stock-gain{
+        font-size: 2em;
+        color: green;       
+    }
+    .stock-description{
+        height: 290px;
+        overflow: auto;
+    }
+}

@@ -1,0 +1,17 @@
+<h4>Monthly Budget</h4>
+  <div>
+    <ul class="collection" *ngFor="let budget of budgets" >
+      <li class="collection-item row">
+        <p class="budget-output budget-title truncate col s6">Car Note</p>
+        <p class="budget-output budget-amount col s6">$450</p>
+      </li>
+      <li class="collection-item row">
+        <p class="budget-output budget-title truncate col s6">{{budget.budgetTitle}}</p>
+        <p class="budget-output budget-amount col s6">{{budget.budgetAmount}}</p>
+      </li>
+    </ul>
+  </div>
+  <div class="budgetSummary row">
+    <p class="col s6">Total</p>
+    <p class="col s6">$10050</p>
+  </div>

@@ -1,0 +1,29 @@
+.goal-list{
+
+}
+.goal-title{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.goal-price{
+    color: #56a656;
+    font-size: 1.2em;
+}
+.goal-date{
+    color: #3c3c79;
+    font-size: 1.2em;
+}
+ul{
+    bottom: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    li{
+        display: inline-block;
+        color: gray;
+        width: 100px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,19 @@
+<div *ngIf="stockName"  class="stock-market stock-market col s12">
+  <h5 class="stock-name">{{stockName.dataset.name}}</h5>
+
+  <div class="col l4">
+    <p class="stock-symbol">Symbol: {{stockName.dataset.dataset_code}}</p>
+    <div class="stock-value">
+      <p class="day-high">High: {{stockName.dataset.data[0][2]}}</p>
+      <p class="day-low">LOW: {{stockName.dataset.data[0][3]}}</p>
+    </div>
+    <p class="stock-gain">Open: {{stockName.dataset.data[0][1]}}</p>
+    <p>Date: {{stockName.dataset.newest_available_date }}</p>
+  </div>
+
+  <div class="col l8">
+    <div class="stock-description card-panel">
+      <span [innerHTML]="stockName.dataset.description"></span>
+    </div>
+  </div>
+</div>

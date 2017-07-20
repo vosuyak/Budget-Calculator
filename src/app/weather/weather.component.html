@@ -1,0 +1,15 @@
+<div onclick="clearInput()" class="row weather-container">
+  <h5 >Weather </h5>
+  <div class="col s12">
+    <div class="weatherinput col s5">
+      <input id="weather" placeholder="City Name" type="text" required [(ngModel)]="cityName">
+      <input id="weather" placeholder="State (IL)" type="text" required [(ngModel)]="stateName">
+      <button (click)="searchCity()">enter</button>
+    </div>
+    <div class="col s7">
+      <p class="weatherLocation" >{{name}}</p>
+      <p class="weatherTemp" >{{weather}}</p>
+      <p class="cloudy">{{icon}} <img src="{{iconUrl}}" alt=""></p>
+    </div>
+  </div>
+</div>

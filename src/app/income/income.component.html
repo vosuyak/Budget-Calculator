@@ -1,0 +1,36 @@
+<h4>Income</h4>
+  <div>
+      <div class="row">
+        <form #form="ngForm" id="incomeForm" (ngSubmit)="addIncomeOwner(form.value)" >
+        <div class="collection col s12">
+          <div class="col s5">
+            <input [(ngModel)]="incomes.incomeOwner" name="incomeOwner" id="incomeOwner" type="text" placeholder="income owner">
+          </div>
+          <div class="col s5">
+            <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number" placeholder="$100,000/Annually">
+          </div>
+          <div class="col s2">
+              <button id="addIncomeBtn" class="salaryBtn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>          
+          </div>
+        </div>
+        </form>
+      </div>
+      <div >
+        <ul *ngFor="let income of incomes">
+          <li  [@incomeAnim]="state" class="row salary-container"  >
+            <div class="col s4 salaryOwner">{{income.incomeOwner}}</div>
+            <div class="col s4"><strong>Annualy:  </strong><i class="salaryAmount">{{income.incomeAmount | currency:'USD':true:'1.2-2'}}</i></div>
+            <div class="col s4 salaryMonthly"><strong>Monthly:  </strong><i class="green-text" id="salaryMonthly">{{income.incomeAmount / 12 | currency:'USD':true:'1.2-2'}}</i></div>
+          </li>
+        </ul>   
+      </div>
+
+  <div *ngIf="incomeservice.incomes?.length > 0"class="subtotalSummary row" id="subtotalSum">
+       <h4 class="center-align">Total Monthly Savings</h4>
+    <p class="col s2">Total</p>
+    <p class="col s5">{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}<em>tax: {{incomeSalaryIn - incomeWTaxesIn | number : '1.2-2'}}</em></p>
+    <p class="col s5">{{monthlySalary | currency:'USD':true:'1.2-2'}}</p>
+  </div>
+
+  </div>
+  <app-weather></app-weather>
