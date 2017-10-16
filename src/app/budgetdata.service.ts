@@ -79,8 +79,6 @@ export class BudgetdataService {
       })
       console.log(`this is the montly summar ${this.monthlySummary}
       ,and this i the total summmary ${this.incomeSummary}`);
-     
-      
   }//addincomeowner() = function adds the owner to the income
 
 }//end of Service
