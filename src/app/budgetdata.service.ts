@@ -11,29 +11,43 @@ export class BudgetdataService {
     const _url = `https://www.quandl.com/api/v3/datasets/EOD/${symbol}.json?api_key=Kp7MUfZpCzigxkq3Gq8W`;
     return this.http.get(_url);
   }//getStockMarket() API
-  public get test(){
-    return console.log('testing the service');
-  }//test your new service with this 
+
   budgets = [];
   public get budgetSummary(){
           return sum(this.budgets, 'budgetAmount');
   }//getter budgetSummary() == sums up the budget in the "budgetAmount"
+
   addBudget(value:any){
     this.budgets.push(
             {
           "budgetTitle":value.budgetTitle,
           "budgetAmount":value.budgetAmount
    })
-              console.log('total'+this.budgetSummary);
+          console.log('total'+this.budgetSummary);
   }//addBudget()= function adds budgets onj to the budgets []
+
   public get budgetCount(){
       return this.budgets.length;
   }//budgetCount()= counts how many objects are in budgets[]
+
               // ==========Income Math============ //
   incomes = [];//array
+  percentage;
+  public get investmentPercentage(){
+    return this.percentage;
+  }
+  public set investmentPercentage(percentage : any){
+    this.percentage = percentage;
+  }
   public get incomeSummary(){
         return sum(this.incomes, 'incomeAmount');
   }//getter incomeSummary()= sums up the income in the "incomeAmount"
+  public get investmentAnually(){
+        return this.incomeSummary * .15;
+  }//getter investmentAnnually() sums of  annual amount at 15% invested
+  public get investmentMonthly(){
+        return this.investmentAnually / 12;
+  }//getter investmentMonthly() monthly amount of suggest investment
   public get incomeInputLimit(){
         if(this.incomes.length === 2){
           let incomeBtn = document.getElementById('addIncomeBtn');
@@ -70,15 +84,19 @@ export class BudgetdataService {
       return console.log('here comes the IRS');
     }
   }// getter incomeWTaxes() = calculates the tax for every income added 
-    addIncomeOwner(value:any){
-    console.log('addincomeOwner()');
-    this.incomes.push(
-      {
-        "incomeOwner":value.incomeOwner,
-        "incomeAmount":value.incomeAmount
-      })
-      console.log(`this is the montly summar ${this.monthlySummary}
-      ,and this i the total summmary ${this.incomeSummary}`);
+  addIncomeOwner(value:any){
+  console.log('addincomeOwner()');
+  this.incomes.push(
+    {
+      "incomeOwner":value.incomeOwner,
+      "incomeAmount":value.incomeAmount,
+      "percentage":value.percentage
+    })
+    console.log(`this is the montly summar ${this.monthlySummary}
+                ,and this i the total summmary ${this.incomeSummary} 
+                this is the investment amount ${this.investmentAnually}
+                this is how much to invest monthly ${this.investmentMonthly}
+                this is the percentage ${this.investmentPercentage}`);
   }//addincomeowner() = function adds the owner to the income
 
 }//end of Service
