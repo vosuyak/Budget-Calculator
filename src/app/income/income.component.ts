@@ -30,6 +30,8 @@ export class IncomeComponent implements OnInit {
   incomeSalaryIn;
   incomeLimit;
   investmentPercentage;
+  investmentAnually;
+  investmentMonthly;
   state = 'active';
   constructor(private incomeservice:BudgetdataService) {}
   
@@ -46,12 +48,15 @@ export class IncomeComponent implements OnInit {
     this.incomeWTaxesIn = this.incomeservice.incomeWTaxes; 
   }
   addIncomeOwner(value:any){
+    this.investmentCard = false;
     this.incomeservice.addIncomeOwner(value);
     this.monthlySalary = this.incomeservice.monthlySummary;
     this.incomeWTaxesIn = this.incomeservice.incomeWTaxes;  
     this.incomeSalaryIn =this.incomeservice.incomeSummary;
     this.incomeLimit = this.incomeservice.incomeInputLimit;
     this.investmentPercentage = this.incomeservice.investmentPercentage;
+    this.investmentAnually = this.incomeservice.investmentAnually;
+    this.investmentMonthly = this.incomeservice.investmentMonthly;
   }
   delete(){
     var index = this.incomes.indexOf(this);

@@ -1,0 +1,25 @@
+.how-to{
+    margin-top: 40px;
+    h5{
+        text-align: center;
+    }
+    ul{
+        li{
+            margin-left: 20px;
+            list-style-type: decimal;
+            i{
+                color: #26a69a;
+            }
+            em{
+                font-size: 13px;
+                color: gray;
+            }
+        }
+        p{
+            color: gray;
+            font-size: 14px;
+            margin: 7px 0 7px 10px;   
+            i{color: #cc4242;}   
+        }        
+    }
+}

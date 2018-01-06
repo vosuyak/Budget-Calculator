@@ -21,6 +21,7 @@ import {routes } from "./app.routes";
 import { StockmarketComponent } from './stockmarket/stockmarket.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { WeatherComponent } from './weather/weather.component';
+import { StepsComponent } from './steps/steps.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { WeatherComponent } from './weather/weather.component';
     BenefitsComponent,
     StockmarketComponent,
     TwitterComponent,
-    WeatherComponent
+    WeatherComponent,
+    StepsComponent
   ],
   imports: [
     BrowserModule,
