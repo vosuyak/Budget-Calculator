@@ -29,10 +29,15 @@ export class IncomeComponent implements OnInit {
   incomeWTaxesIn;
   incomeSalaryIn;
   incomeLimit;
+  investmentPercentage;
   state = 'active';
   constructor(private incomeservice:BudgetdataService) {}
   
-  // incomeInput = true;
+  investmentCard = false;
+
+  toggelInvestmentCard() {
+    this.investmentCard = !this.investmentCard;
+  }
 
   ngOnInit() {
     this.incomes = this.incomeservice.incomes;
@@ -46,6 +51,7 @@ export class IncomeComponent implements OnInit {
     this.incomeWTaxesIn = this.incomeservice.incomeWTaxes;  
     this.incomeSalaryIn =this.incomeservice.incomeSummary;
     this.incomeLimit = this.incomeservice.incomeInputLimit;
+    this.investmentPercentage = this.incomeservice.investmentPercentage;
   }
   delete(){
     var index = this.incomes.indexOf(this);

@@ -32,18 +32,17 @@ export class BudgetdataService {
 
               // ==========Income Math============ //
   incomes = [];//array
-  percentage;
   public get investmentPercentage(){
-    return this.percentage;
+    let target = sum(this.incomes, 'percentage');
+    let percent = target * .01;
+    return percent;
   }
-  public set investmentPercentage(percentage : any){
-    this.percentage = percentage;
-  }
+
   public get incomeSummary(){
         return sum(this.incomes, 'incomeAmount');
   }//getter incomeSummary()= sums up the income in the "incomeAmount"
   public get investmentAnually(){
-        return this.incomeSummary * .15;
+        return this.incomeSummary * this.investmentPercentage;
   }//getter investmentAnnually() sums of  annual amount at 15% invested
   public get investmentMonthly(){
         return this.investmentAnually / 12;
