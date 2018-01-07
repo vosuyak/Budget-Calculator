@@ -14,18 +14,14 @@
           </div>
         </div>
         <div class="row">
-          <div class="col s6">
+          <div class="col s5">
               <input type="checkbox" class="filled-in" id="filled-in-box" (click)="toggelInvestmentCard()" />
               <label for="filled-in-box">Investment Percentage</label>
           </div>
-          <div *ngIf="investmentCard" >
-            <div class="col s4">
-              <p>
-                We recommend investing <b>15%</b>
-              </p>
-            </div>
-            <div class="col s2">
-              <input [(ngModel)]="incomes.percentage" name="percentage" type="number" placeholder="%">            
+          <div class="col s7">
+              <div *ngIf="investmentCard" >              
+                <div class="col s10">We recommend investing <b>15%</b></div>  
+                <div class="col s2"><input size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" placeholder="15%"> </div>   
             </div>
           </div>
         </div>      
@@ -40,37 +36,42 @@
           </li>
         </ul>   
       </div>
+      <!-- *ngIf="incomeservice.incomes?.length > 0" -->
+      <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0" >
 
-      <!-- <div *ngIf="incomeservice.incomes?.length > 0"class="subtotalSummary row" id="subtotalSum">
-          <h4 class="center-align">Total Monthly Savings</h4>
-        <p class="col s2">Total</p>
-        <p class="col s5">{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}<em>tax: {{incomeSalaryIn - incomeWTaxesIn | number : '1.2-2'}}</em></p>
-        <p class="col s5">{{monthlySalary | currency:'USD':true:'1.2-2'}}</p>
-        <p class="col s12" >
-          After investing <em>{{investmentPercentage | percent}}</em> you will annually pay <em>{{investmentAnually | currency:'USD':true:'1.2-2'}}</em> to a brighter future. That is <em>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</em> monthly.
-        </p>
-      </div> -->
-      <table *ngIf="incomeservice.incomes?.length > 0">
           <thead>
-              <tr><th></th> <th> <h5>After Tax Income</h5></th> <th></th></tr>        
             <tr>
                 <th>Annual Income</th>
                 <th>Tax Amount</th>
                 <th>Monthly Income</th>
             </tr>
           </thead>
-  
           <tbody>
             <tr>
               <td>{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
-              <td>{{incomeSalaryIn - incomeWTaxesIn | number : '1.2-2'}}</td>
+              <td>{{incomeSalaryIn - incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
               <td>{{monthlySalary | currency:'USD':true:'1.2-2' }}</td>
             </tr>
           </tbody>
-        </table>
-      <table *ngIf="incomeservice.incomes?.length > 0">
+
           <thead>
-            <tr><th></th> <th> <h5>Before Tax Invesetment</h5></th> <th></th></tr>              
+            <tr>
+                <th>Percentage</th>
+                <th>Annual Amount</th>
+                <th>Monthly Amount</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{investmentPercentage | percent}}</td>
+              <td>{{investmentAnually | currency:'USD':true:'1.2-2'}}</td>
+              <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</td>
+            </tr>
+          </tbody>
+
+        </table>
+      <!-- <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0">
+          <thead>
             <tr>
                 <th>Percentage</th>
                 <th>Annual Amount</th>
@@ -85,11 +86,10 @@
               <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</td>
             </tr>
           </tbody>
-        </table>
+      </table> -->
   </div>
   <div id="howto" class="modal">
       <div class="modal-content">
-        <h4>Modal Header</h4>
           <app-steps></app-steps>
       </div>
   </div>
