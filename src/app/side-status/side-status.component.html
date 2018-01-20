@@ -1,0 +1,15 @@
+<ul class="side-status">
+  <li class="user-view">
+      <!-- <a href="#!name"><span class="white-text name">{{fullName.incomeOwner}}</span></a> -->
+      <!-- <a href="#!email"><span class="white-text email">Your Financial Calculator</span></a> -->
+      <p class="center-align monthly-title">Total Monthly Budget </p>
+      <p class="center-align monthly-amount userpod-budget-amount">{{user.monthlyFreeCash | currency:'USD':true:'1.2-2'}}</p>
+  </li>
+  <li><div class="divider"></div></li>
+  <div class="userpod-list">
+    <p class="center-align">List of this Month Budget <span *ngIf="user.budgets?.length > 0"  class="budget-collection"> {{user.budgetCount}}</span></p>
+    <ul>
+      <li *ngFor="let goal of user.budgets" class="center-align goal-userpod truncate">{{goal.budgetTitle}}</li>
+    </ul>
+  </div>
+</ul>

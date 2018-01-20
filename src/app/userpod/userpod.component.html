@@ -1,23 +1,7 @@
 
   <ul id="slide-out" class="side-nav">
-    <li><div class="user-view">
-      <div class="background">
-      <i class="fa fa-user-circle" aria-hidden="true"></i>
-      </div>
-      <a href="#!name"><span class="white-text name">{{fullName.incomeOwner}}</span></a>
-      <a href="#!email"><span class="white-text email">Your Financial Calculator</span></a>
-    </div></li>
-  
-    <div class="userpod-preview">
-    <p class="center-align">Total Monthly Budget</p>
-    <p class="center-align userpod-budget-amount">{{user.monthlyFreeCash | currency:'USD':true:'1.2-2'}}</p>
-    <li><div class="divider"></div></li>
-    <p class="center-align">List of this Month Budget</p>
-    <ul  *ngFor="let goal of user.budgets">
-      <li class="center-align goal-userpod truncate">{{goal.budgetTitle}}</li>
-    </ul>
-    </div>
+<app-side-status></app-side-status>
   </ul>
   <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars" aria-hidden="true"></i></a>
   <!-- increment -->
-  <div *ngIf="user.budgets?.length > 0"  class="budget-collection">{{user.budgetCount}}</div>
+  <div *ngIf="user.budgets?.length > 0"  class="budget-collection show-on-medium-and-up	">{{user.budgetCount}}</div>

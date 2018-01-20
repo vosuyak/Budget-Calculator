@@ -1,4 +1,20 @@
 h4{text-align: center;}
+.monthlyspending-container{
+    background-color: white;
+    padding: 1em;
+}
+.addBudgetBtn{
+    background-color: #47BAC1;
+    color: #B4E3E5;
+    background-color: #47BAC1;
+    color: #B4E3E5;
+    width: 150px;
+    padding: .3em;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
+}
 .budget-output{
     width: 50%;
     display: inline;
@@ -21,10 +37,6 @@ h4{text-align: center;}
         color: green;
     }    
     }
-}
-.addBudgetBtn{
-    width: 100%;
-    margin-bottom: 10px;
 }
 .budgetListContainer{
     max-height: 400px;      

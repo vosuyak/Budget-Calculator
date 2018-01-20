@@ -1,19 +1,18 @@
-    <div class="container calculator-container">
+    <div class="calculator-container">
       <div class="row">
-        <div class="col l7 m12 s12">
-        <!--userinput-->
-            <div class="col l12">
-                <app-income></app-income>
-            </div>
+        <div style="padding-left:0px" class="col l3 m4 s12 hide-on-med-and-down">
+            <app-side-status></app-side-status>
         </div>
-      <div class="col l2"></div>
+        <div class="col l6 m4 s12">
+        <!--userinput-->
+                <app-income></app-income>
+        </div>
         <!--finachreport-->
         <div class="col l3 m4 s12 ">
-            <div class="right-col-budget">
                 <app-monthlyspending></app-monthlyspending>
-            </div>
         </div>
       </div>
+    </div>
     <!--2nd row-->
 
 

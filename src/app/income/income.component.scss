@@ -1,28 +1,33 @@
 h4{
     text-align: center;
 }
+.income-card{
+    background-color: white;
+    padding: 1em;
+}
 .income-owner-name{
         font-size: 1.2em;
 }
 .salaryBtn{
-    color: white;
-    background: teal;
+    background: #47BAC1;
     border: none;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    margin-top: 10px;
-    float: right;
+    width: 60px;
+    height: 60px;
+    position: relative;
+    margin-left: 20px;
     i{
-        color: white;
+        color: #B4E3E5;
+        margin-top: 5px;
+        font-size: 1.7em;
     }
 }
 .salary-container{
     margin: 4px 0;
-    background: #FFFFEB;
+    background: rgba(111, 125, 149, 0.49);
     padding: 1em;
     border-radius: 5px;
-    border: solid 1px lightgray;
+    border: solid 3px #6f7d95;
     span{
         float: right;
         font-weight: bold;
@@ -34,7 +39,7 @@ h4{
         font-size: 1.2em;
     }
     .salaryAmount{
-        color: #56a656;
+        color: #f6f5f5;
         font-weight: bold;
         font-size: 1.2em;
     }
@@ -47,11 +52,38 @@ h4{
         font-weight: bold;
         font-size: 1em;
         &:nth-child(1n + 2){
-            color: green;
+            color: #f6f5f5;
         }    
         em{
             font-size: 16px;
             color: gray;
         }
     }
+}
+thead{
+    color: #D8DCE2;
+    background-color: #6F7D95;
+    th{
+        border-radius: 0px;
+    }
+}
+tbody{
+    background-color: white;
+}
+.investment-percent input{
+    width: 100px;
+    margin-left: 12px;
+    height: 30px;
+}
+.addIncometBtn{
+    background-color: #47BAC1;
+    color: #B4E3E5;
+    background-color: #47BAC1;
+    color: #B4E3E5;
+    width: 150px;
+    padding: .3em;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    display: block;
 }

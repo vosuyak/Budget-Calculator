@@ -1,13 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+body{
+    background-color: #ECF2F6;
+}
 h4{
     font-size: 1.6em;
 }
-.right-col-budget{
-    background: #fafafa;
-    border: solid .4px lightgray;
-    height: 100%;
-    padding: 2em;
-}
 input{
     box-shadow: none;
+    &:focus{
+        border-bottom: 1px solid #47bac1;
+        box-shadow: 0 1px 0 0 #47bac1 !important;
+    }
+}
+.row{
+    margin: 0px;
 }

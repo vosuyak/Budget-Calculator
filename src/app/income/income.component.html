@@ -1,38 +1,37 @@
 <h4>Income</h4>
   <div>
-      <div class="row">
-        <form #form="ngForm" id="incomeForm" (ngSubmit)="addIncomeOwner(form.value)" >
-        <div class="collection col s12">
-          <div class="col s6">
-            <input [(ngModel)]="incomes.incomeOwner" name="incomeOwner" id="incomeOwner" type="text" placeholder="income owner">
-          </div>
-          <div class="col s4">
-            <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number" placeholder="$100,000/Annually">
-          </div>
-          <div class="col s2">
-              <button id="addIncomeBtn" class="salaryBtn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>          
-          </div>
-        </div>
         <div class="row">
-          <div class="col s5">
-              <input type="checkbox" class="filled-in" id="filled-in-box" (click)="toggelInvestmentCard()" />
-              <label for="filled-in-box">Investment Percentage</label>
-          </div>
-          <div class="col s7">
-              <div *ngIf="investmentCard" >              
-                <div class="col s10">We recommend investing <b>15%</b></div>  
-                <div class="col s2"><input size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" placeholder="15%"> </div>   
+          <div class="income-card">
+          <form #form="ngForm" id="incomeForm" (ngSubmit)="addIncomeOwner(form.value)" >
+            <div class="row">
+                <div class="col s6 input-field">
+                    <input [(ngModel)]="incomes.incomeOwner" name="incomeOwner" id="incomeOwner" type="text"  >
+                    <label for="">Income Owner</label>                
+                </div>
+                <div class="col s6 input-field">
+                  <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number" >
+                  <label for="">Income Amount</label>
+                </div>
             </div>
-          </div>
-        </div>      
-        </form>
+            <div class="row">
+                <div class="col s6 input-field">
+                        <label for="filled-in-box">Investment %</label>
+                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" > 
+                </div>
+                <div class="col s6 input-field">
+                    <button type="submit" id="addIncomeBtn" class="addIncometBtn waves-effect waves-light">Add</button>
+                    <!-- <button id="addIncomeBtn" class="salaryBtn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>           -->
+                </div>
+              </div>  
+          </form>
+        </div>    
       </div>
       <div>
         <ul *ngFor="let income of incomes">
           <li  [@incomeAnim]="state" class="row salary-container"  >
             <div class="col s4 salaryOwner">{{income.incomeOwner}}</div>
             <div class="col s4"><strong>Annualy:  </strong><i class="salaryAmount">{{income.incomeAmount | currency:'USD':true:'1.2-2'}}</i></div>
-            <div class="col s4 salaryMonthly"><strong>Monthly:  </strong><i class="green-text" id="salaryMonthly">{{income.incomeAmount / 12 | currency:'USD':true:'1.2-2'}}</i></div>
+            <div class="col s4 salaryAmount"><strong>Monthly:  </strong><i id="salaryMonthly">{{income.incomeAmount / 12 | currency:'USD':true:'1.2-2'}}</i></div>
           </li>
         </ul>   
       </div>

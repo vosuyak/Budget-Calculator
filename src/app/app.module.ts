@@ -22,6 +22,7 @@ import { StockmarketComponent } from './stockmarket/stockmarket.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { WeatherComponent } from './weather/weather.component';
 import { StepsComponent } from './steps/steps.component';
+import { SideStatusComponent } from './side-status/side-status.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { StepsComponent } from './steps/steps.component';
     StockmarketComponent,
     TwitterComponent,
     WeatherComponent,
-    StepsComponent
+    StepsComponent,
+    SideStatusComponent
   ],
   imports: [
     BrowserModule,

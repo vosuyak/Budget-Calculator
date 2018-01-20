@@ -1,6 +1,21 @@
 nav{
-    background: #2a3b4d !important;
+    background: #354052 !important;
 }
 .mainNav{
     background: #b49700;
+}
+.how-to-btn{
+    background-color: transparent;
+    border: solid 2px #47BAC1;
+    color: #47BAC1;
+    width: 100px;
+    text-align: center;
+    height: 35px;
+    border-radius: 5px;
+    margin-right: 20px;
+    line-height: 30px;
+    font-weight: 500;
+}
+.nav-wrapper{
+    z-index: 3;
 }

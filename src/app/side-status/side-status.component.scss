@@ -1,0 +1,63 @@
+.side-status{
+    margin: 0;
+    background-color: #5b687d;
+    padding: 1em;
+    top: 0px;
+    bottom: 0;
+    position: fixed;
+    width: 300px;
+    width: 300px;
+    z-index: -1;
+    .user-view{
+        margin-top: 60px;
+        background-color: #ecf2f6;
+        border-radius: 6px;
+        padding: 1em;
+        .monthly-title{
+            text-align: center;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+        .monthly-amount{
+            text-align: center;
+            font-size: 1.4em;
+            color: #6cac6c;
+            font-weight: 600;
+            margin-bottom: 5px;
+            margin-top: 5px;
+        }
+    }
+    .divider{
+        margin: 15px 0 ;
+    }
+    .userpod-list{
+        p{
+            color: #ecf2f6;
+            font-weight: 300;
+            font-size: 1.2em;
+        }
+        ul{
+            background-color: #ecf2f6;
+            border-radius: 5px;
+            li{
+                list-style-type: none;
+                padding: .7em 1.5em;
+                color: #354052;
+                text-align: left;
+            }
+        }
+    }
+}
+.budget-collection{
+    width: 15px;
+    height: 15px;
+    background-color: #47bac1;
+    position: relative;
+    padding: .1em .5em;
+    border-radius: 50%;
+    color: #ecf2f6;
+    font-size: 15px;
+    font-weight: 500;
+    z-index: 2;
+    margin-left: 5px;
+}
