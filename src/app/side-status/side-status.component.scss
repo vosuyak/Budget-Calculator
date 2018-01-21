@@ -39,6 +39,8 @@
         ul{
             background-color: #ecf2f6;
             border-radius: 5px;
+            max-height: 240px;
+            overflow-y: auto;
             li{
                 list-style-type: none;
                 padding: .7em 2.5em;

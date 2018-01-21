@@ -36,39 +36,7 @@
         </ul>   
       </div>
       <!-- *ngIf="incomeservice.incomes?.length > 0" -->
-      <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0" >
-
-          <thead>
-            <tr>
-                <th>Annual Income</th>
-                <th>Tax Amount</th>
-                <th>Monthly Income</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
-              <td>{{incomeSalaryIn - incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
-              <td>{{monthlySalary | currency:'USD':true:'1.2-2' }}</td>
-            </tr>
-          </tbody>
-
-          <thead>
-            <tr>
-                <th>Percentage</th>
-                <th>Annual Amount</th>
-                <th>Monthly Amount</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{investmentPercentage | percent}}</td>
-              <td>{{investmentAnually | currency:'USD':true:'1.2-2'}}</td>
-              <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</td>
-            </tr>
-          </tbody>
-
-        </table>
+      <app-finance-table></app-finance-table>
       <!-- <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0">
           <thead>
             <tr>

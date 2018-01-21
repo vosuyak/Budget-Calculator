@@ -24,6 +24,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { StepsComponent } from './steps/steps.component';
 import { SideStatusComponent } from './side-status/side-status.component';
 import { FirstCapatializePipe } from './first-capatialize.pipe';
+import { FinanceTableComponent } from './finance-table/finance-table.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { FirstCapatializePipe } from './first-capatialize.pipe';
     WeatherComponent,
     StepsComponent,
     SideStatusComponent,
-    FirstCapatializePipe
+    FirstCapatializePipe,
+    FinanceTableComponent
   ],
   imports: [
     BrowserModule,
