@@ -23,6 +23,7 @@ import { TwitterComponent } from './twitter/twitter.component';
 import { WeatherComponent } from './weather/weather.component';
 import { StepsComponent } from './steps/steps.component';
 import { SideStatusComponent } from './side-status/side-status.component';
+import { FirstCapatializePipe } from './first-capatialize.pipe';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { SideStatusComponent } from './side-status/side-status.component';
     TwitterComponent,
     WeatherComponent,
     StepsComponent,
-    SideStatusComponent
+    SideStatusComponent,
+    FirstCapatializePipe
   ],
   imports: [
     BrowserModule,

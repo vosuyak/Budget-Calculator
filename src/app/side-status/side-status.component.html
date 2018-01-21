@@ -9,7 +9,7 @@
   <div class="userpod-list">
     <p class="center-align">List of this Month Budget <span *ngIf="user.budgets?.length > 0"  class="budget-collection"> {{user.budgetCount}}</span></p>
     <ul>
-      <li *ngFor="let goal of user.budgets" class="center-align goal-userpod truncate">{{goal.budgetTitle}}</li>
+      <li *ngFor="let goal of user.budgets" class="center-align goal-userpod truncate"><i>{{goal.budgetTitle | firstCap}}</i><em>{{goal.budgetAmount}}</em></li>
     </ul>
   </div>
 </ul>

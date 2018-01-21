@@ -1,12 +1,17 @@
 .how-to{
-    margin-top: 40px;
-    h5{
+    padding: 1em;
+    h4{
         text-align: center;
+        font-weight: 600;
+    }
+    .step{
+        padding: 0 1em;
     }
     ul{
         li{
             margin-left: 20px;
             list-style-type: decimal;
+            font-weight: 500;
             i{
                 color: #26a69a;
             }

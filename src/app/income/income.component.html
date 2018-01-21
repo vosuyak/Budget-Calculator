@@ -29,7 +29,7 @@
       <div>
         <ul *ngFor="let income of incomes">
           <li  [@incomeAnim]="state" class="row salary-container"  >
-            <div class="col s4 salaryOwner">{{income.incomeOwner}}</div>
+            <div class="col s4 salaryOwner">{{income.incomeOwner  | firstCap}}</div>
             <div class="col s4"><strong>Annualy:  </strong><i class="salaryAmount">{{income.incomeAmount | currency:'USD':true:'1.2-2'}}</i></div>
             <div class="col s4 salaryAmount"><strong>Monthly:  </strong><i id="salaryMonthly">{{income.incomeAmount / 12 | currency:'USD':true:'1.2-2'}}</i></div>
           </li>

@@ -1,16 +1,21 @@
 nav{
     background: #354052 !important;
+    img{
+        border: 0;
+        width: 240px;
+        margin-top: 5px;
+    }
 }
 .mainNav{
     background: #b49700;
 }
 .how-to-btn{
     background-color: transparent;
-    border: solid 2px #47BAC1;
+    border: solid 1.3px #47BAC1;
     color: #47BAC1;
     width: 100px;
     text-align: center;
-    height: 35px;
+    height: 31px;
     border-radius: 5px;
     margin-right: 20px;
     line-height: 30px;

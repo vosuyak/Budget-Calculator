@@ -41,9 +41,22 @@
             border-radius: 5px;
             li{
                 list-style-type: none;
-                padding: .7em 1.5em;
+                padding: .7em 2.5em;
                 color: #354052;
-                text-align: left;
+                width: 100%;
+                border-bottom: solid 1px #ced8e6;
+                i{
+                    line-height: inherit;
+                    font-style: normal;
+                    font-weight: 500;
+                    float: left;
+                }
+                em{
+                    font-style: normal;
+                    color: #6dac6e;
+                    font-weight: 500;
+                    float: right;
+                }
             }
         }
     }
@@ -51,7 +64,7 @@
 .budget-collection{
     width: 15px;
     height: 15px;
-    background-color: #47bac1;
+    background-color: #cc4242;
     position: relative;
     padding: .1em .5em;
     border-radius: 50%;
