@@ -55,30 +55,61 @@ export class BudgetdataService {
         }
   }//incomeInputLimit() = diables button
   public get monthlySummary(){
-        return +this.incomeWTaxes / 12;
+        return this.incomeWTaxes / 12;
   }// getter monthlySummary() = monthly amount function
   public get monthlyFreeCash(){
     let freeCash = this.monthlySummary - this.budgetSummary;
     return freeCash;
   }// getter monthlyFreeCash() = subtracts the diffrence in the monthly summary and the budget sum
   public get incomeWTaxes(){
-    if (this.incomeSummary < 9325) {
-      return this.incomeSummary - this.incomeSummary * .10;
+    if (this.incomeSummary < 13225) {
+      let taxAdded = this.incomeSummary;
+      taxAdded = taxAdded - 3700;
+      taxAdded = taxAdded * .10;
+      taxAdded = taxAdded + 0;
+      return;
     }
-    if (this.incomeSummary < 37950) {
-      return this.incomeSummary - this.incomeSummary * .15;          
+    if (this.incomeSummary < 42400) {
+      let taxAdded = this.incomeSummary; 
+      taxAdded = taxAdded - 13225;
+      taxAdded = taxAdded * .12;
+      taxAdded = taxAdded + 952.50;
+      return taxAdded - 13225;      
     }
-    if (this.incomeSummary < 91900) {
-      return this.incomeSummary - this.incomeSummary * .25;          
+    if (this.incomeSummary < 86200) {
+      let taxAdded = this.incomeSummary; 
+      taxAdded = taxAdded - 42400;
+      taxAdded = taxAdded * .22;
+      taxAdded = taxAdded + 4453.50;
+      return taxAdded;      
     }
-    if (this.incomeSummary < 191650) {
-      return this.incomeSummary - this.incomeSummary * .28;                
+    if (this.incomeSummary < 161200) {
+      let taxAdded = this.incomeSummary;
+      taxAdded = taxAdded - 86200;
+      taxAdded = taxAdded * .24;
+      taxAdded = taxAdded + 14089.50; 
+      return taxAdded;      
     }
-    if (this.incomeSummary < 416700) {
-      return this.incomeSummary - this.incomeSummary * .33;        
+    if (this.incomeSummary < 203700) {
+      let taxAdded = this.incomeSummary;  
+      taxAdded = taxAdded - 161200;
+      taxAdded = taxAdded * .32;
+      taxAdded = taxAdded + 32089.50;
+      return taxAdded;      
     } 
-    if (this.incomeSummary < 418400) {
-      return this.incomeSummary - this.incomeSummary * .35;          
+    if (this.incomeSummary < 503700) {
+      let taxAdded = this.incomeSummary;
+      taxAdded = taxAdded - 203700;
+      taxAdded = taxAdded * .35;
+      taxAdded = taxAdded + 45689.50;
+      return taxAdded;      
+    }
+    if (this.incomeSummary > 503701) {
+      let taxAdded = this.incomeSummary;
+      taxAdded = taxAdded;
+      taxAdded = taxAdded * .37;
+      taxAdded = taxAdded + 150689.50; 
+      return taxAdded;      
     } else {
       return console.log('here comes the IRS');
     }

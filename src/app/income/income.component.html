@@ -5,18 +5,18 @@
           <form #form="ngForm" id="incomeForm" (ngSubmit)="addIncomeOwner(form.value)" >
             <div class="row">
                 <div class="col s6 input-field">
-                    <input [(ngModel)]="incomes.incomeOwner" name="incomeOwner" id="incomeOwner" type="text"  >
+                    <input [(ngModel)]="incomes.incomeOwner" name="incomeOwner" id="incomeOwner" type="text" class="validate" >
                     <label for="">Income Owner</label>                
                 </div>
                 <div class="col s6 input-field">
-                  <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number" >
+                  <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number"class="validate" >
                   <label for="">Income Amount</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s6 input-field">
-                        <label for="filled-in-box">Investment %</label>
-                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" > 
+                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" class="validate"> 
+                        <label for="filled-in-box">Investment %</label>                        
                 </div>
                 <div class="col s6 input-field">
                     <button type="submit" id="addIncomeBtn" class="addIncometBtn waves-effect waves-light">Add</button>
@@ -36,8 +36,23 @@
         </ul>   
       </div>
       <!-- *ngIf="incomeservice.incomes?.length > 0" -->
-      <app-finance-table></app-finance-table>
-      <!-- <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0">
+      <table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0" >
+
+          <thead>
+            <tr>
+                <th>Annual Income</th>
+                <th>Tax Amount</th>
+                <th>Monthly Income</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{incomeSalaryIn - incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
+              <td>{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
+              <td>need</td>
+            </tr>
+          </tbody>
+
           <thead>
             <tr>
                 <th>Percentage</th>
@@ -45,7 +60,6 @@
                 <th>Monthly Amount</th>
             </tr>
           </thead>
-  
           <tbody>
             <tr>
               <td>{{investmentPercentage | percent}}</td>
@@ -53,11 +67,12 @@
               <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</td>
             </tr>
           </tbody>
-      </table> -->
+
+        </table>
+
   </div>
   <div id="howto" class="modal">
       <div class="modal-content">
           <app-steps></app-steps>
       </div>
   </div>
-  <!-- <app-weather></app-weather> -->

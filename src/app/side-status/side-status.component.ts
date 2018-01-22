@@ -18,7 +18,7 @@ export class SideStatusComponent implements OnInit {
     this.fullName = this.user.incomes;
     this.freeCash = this.user.monthlyFreeCash;
     this.goals = this.user.budgets;
-    this.budgetCount = this.user.budgetCount;
+    this.budgetCount = this.user.budgetCount;    
   }
 
 }

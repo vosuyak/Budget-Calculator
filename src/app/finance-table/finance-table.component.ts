@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { BudgetdataService } from "../budgetdata.service";
+
 @Component({
   selector: 'app-finance-table',
   templateUrl: './finance-table.component.html',
   styleUrls: ['./finance-table.component.scss']
 })
 export class FinanceTableComponent implements OnInit {
-
-  constructor(private incomeservice:BudgetdataService) { }
+  budgetCount: any;
+  goals: any;
+  freeCash: any;
+  fullName: any;
   incomes;
   incomeSalaryTotal;
   monthlySalary;
@@ -17,16 +20,23 @@ export class FinanceTableComponent implements OnInit {
   investmentPercentage;
   investmentAnually;
   investmentMonthly;
+  constructor(public tableService:BudgetdataService) { }
+
   ngOnInit() {
-    this.incomes = this.incomeservice.incomes;   
-    this.incomeSalaryTotal = this.incomeservice.incomeSummary;  
-    this.monthlySalary = this.incomeservice.monthlySummary;
-    this.incomeWTaxesIn = this.incomeservice.incomeWTaxes; 
-    this.incomeSalaryIn =this.incomeservice.incomeSummary;
-    this.incomeLimit = this.incomeservice.incomeInputLimit;
-    this.investmentPercentage = this.incomeservice.investmentPercentage;
-    this.investmentAnually = this.incomeservice.investmentAnually;
-    this.investmentMonthly = this.incomeservice.investmentMonthly; 
+    this.incomes = this.tableService.incomes;   
+    this.monthlySalary = this.tableService.monthlySummary;
+    this.incomeWTaxesIn = this.tableService.incomeWTaxes; 
+    this.incomeSalaryIn =this.tableService.incomeSummary;
+    this.investmentPercentage = this.tableService.investmentPercentage;
+    this.investmentAnually = this.tableService.investmentAnually;
+    this.investmentMonthly = this.tableService.investmentMonthly; 
+    console.log(` ${this.incomeWTaxesIn}, ${this.investmentAnually}, ${this.investmentMonthly}`);
+
+    this.fullName = this.tableService.incomes;
+    this.freeCash = this.tableService.monthlyFreeCash;
+    this.goals = this.tableService.budgets;
+    this.budgetCount = this.tableService.budgetCount;   
+
   }
 
 }

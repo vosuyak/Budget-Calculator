@@ -33,7 +33,7 @@ export class IncomeComponent implements OnInit {
   investmentAnually;
   investmentMonthly;
   state = 'active';
-  constructor(private incomeservice:BudgetdataService) {}
+  constructor(public incomeservice:BudgetdataService) {}
   
   investmentCard = false;
 

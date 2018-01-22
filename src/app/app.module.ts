@@ -22,9 +22,10 @@ import { StockmarketComponent } from './stockmarket/stockmarket.component';
 import { TwitterComponent } from './twitter/twitter.component';
 import { WeatherComponent } from './weather/weather.component';
 import { StepsComponent } from './steps/steps.component';
+import { FinanceTableComponent } from './finance-table/finance-table.component';
 import { SideStatusComponent } from './side-status/side-status.component';
 import { FirstCapatializePipe } from './first-capatialize.pipe';
-import { FinanceTableComponent } from './finance-table/finance-table.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -43,10 +44,11 @@ import { FinanceTableComponent } from './finance-table/finance-table.component';
     StockmarketComponent,
     TwitterComponent,
     WeatherComponent,
+    FirstCapatializePipe,    
     StepsComponent,
     SideStatusComponent,
-    FirstCapatializePipe,
-    FinanceTableComponent
+    FinanceTableComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

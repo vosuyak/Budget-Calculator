@@ -1,4 +1,4 @@
-<table class="responsive-table" *ngIf="incomeservice.incomes?.length > 0" >
+<table class="responsive-table" *ngIf="tableService " >
     
   <thead>
     <tr>
@@ -31,3 +31,4 @@
   </tbody>
 
 </table>
+<p>{{investmentPercentage | percent}}</p>
