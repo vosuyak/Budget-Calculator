@@ -24,7 +24,7 @@ h4{
 }
 .salary-container{
     margin: 4px 0;
-    background: rgba(111, 125, 149, 0.49);
+    background: #6f7d95;
     padding: 1em;
     border-radius: 5px;
     border: solid 1px #6f7d95;
@@ -34,9 +34,15 @@ h4{
         color: #9d1a1a;
         font-size: 1.2em;
     }
+    strong{
+        color: #d3d8de;
+        font-size: 16px;
+        font-weight: bold;
+    }
     .salaryOwner{
         font-weight: bold;
         font-size: 1.2em;
+        color: #354052;
     }
     .salaryAmount{
         color: #f6f5f5;

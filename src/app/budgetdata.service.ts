@@ -48,7 +48,7 @@ export class BudgetdataService {
         return this.investmentAnually / 12;
   }//getter investmentMonthly() monthly amount of suggest investment
   public get incomeInputLimit(){
-        if(this.incomes.length === 2){
+        if(this.incomes.length === 1){
           let incomeBtn = document.getElementById('addIncomeBtn');
           incomeBtn.setAttribute("disabled","disabled")
           return incomeBtn.style.opacity = "0.4";
@@ -58,23 +58,30 @@ export class BudgetdataService {
         return this.incomeWTaxes / 12;
   }// getter monthlySummary() = monthly amount function
   public get monthlyFreeCash(){
-    let freeCash = this.monthlySummary - this.budgetSummary;
+    let freeCash = this.monthlyIncomeWTax - this.budgetSummary;
+    freeCash = freeCash - 30.82;
     return freeCash;
   }// getter monthlyFreeCash() = subtracts the diffrence in the monthly summary and the budget sum
+  public get salaryWTax(){
+    return this.incomeSummary - this.incomeWTaxes;
+  }
+  public get monthlyIncomeWTax(){
+    return this.salaryWTax / 12;
+  }
   public get incomeWTaxes(){
     if (this.incomeSummary < 13225) {
       let taxAdded = this.incomeSummary;
       taxAdded = taxAdded - 3700;
       taxAdded = taxAdded * .10;
       taxAdded = taxAdded + 0;
-      return;
+      return taxAdded;
     }
     if (this.incomeSummary < 42400) {
       let taxAdded = this.incomeSummary; 
       taxAdded = taxAdded - 13225;
       taxAdded = taxAdded * .12;
       taxAdded = taxAdded + 952.50;
-      return taxAdded - 13225;      
+      return taxAdded;      
     }
     if (this.incomeSummary < 86200) {
       let taxAdded = this.incomeSummary; 
@@ -106,7 +113,7 @@ export class BudgetdataService {
     }
     if (this.incomeSummary > 503701) {
       let taxAdded = this.incomeSummary;
-      taxAdded = taxAdded;
+      taxAdded = taxAdded - 503700;
       taxAdded = taxAdded * .37;
       taxAdded = taxAdded + 150689.50; 
       return taxAdded;      

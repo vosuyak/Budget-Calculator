@@ -1,5 +1,7 @@
 nav{
     background: #354052 !important;
+    position: relative;
+    z-index: 11;
     img{
         border: 0;
         width: 240px;
@@ -20,7 +22,4 @@ nav{
     margin-right: 20px;
     line-height: 30px;
     font-weight: 500;
-}
-.nav-wrapper{
-    z-index: 3;
 }

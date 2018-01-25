@@ -27,11 +27,13 @@ export class IncomeComponent implements OnInit {
   addTaxes;
   incomeSalaryTotal;
   incomeWTaxesIn;
+  salaryWTax;
   incomeSalaryIn;
   incomeLimit;
   investmentPercentage;
   investmentAnually;
   investmentMonthly;
+  monthlyIncomeWTax;
   state = 'active';
   constructor(public incomeservice:BudgetdataService) {}
   
@@ -46,6 +48,8 @@ export class IncomeComponent implements OnInit {
     this.incomeSalaryTotal = this.incomeservice.incomeSummary;  
     this.monthlySalary = this.incomeservice.monthlySummary;
     this.incomeWTaxesIn = this.incomeservice.incomeWTaxes; 
+    this.salaryWTax = this.incomeservice.salaryWTax;
+    this.monthlyIncomeWTax = this.incomeservice.monthlyIncomeWTax;
   }
   addIncomeOwner(value:any){
     this.investmentCard = false;
@@ -57,6 +61,9 @@ export class IncomeComponent implements OnInit {
     this.investmentPercentage = this.incomeservice.investmentPercentage;
     this.investmentAnually = this.incomeservice.investmentAnually;
     this.investmentMonthly = this.incomeservice.investmentMonthly;
+    this.monthlyIncomeWTax = this.incomeservice.monthlyIncomeWTax;
+    this.salaryWTax = this.incomeservice.salaryWTax;
+    
   }
   delete(){
     var index = this.incomes.indexOf(this);

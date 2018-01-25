@@ -5,9 +5,9 @@
     top: 0px;
     bottom: 0;
     position: fixed;
+    height: 100vh;
     width: 300px;
-    width: 300px;
-    z-index: -1;
+    z-index: 10;
     .user-view{
         margin-top: 60px;
         background-color: #ecf2f6;
@@ -23,8 +23,7 @@
             font-size: 1.4em;
             color: #6cac6c;
             font-weight: 600;
-            margin-bottom: 5px;
-            margin-top: 5px;
+            margin:0;
         }
     }
     .divider{
@@ -35,15 +34,17 @@
             color: #ecf2f6;
             font-weight: 300;
             font-size: 1.2em;
+            margin: 0;
         }
         ul{
             background-color: #ecf2f6;
+            margin-top: 8px;
             border-radius: 5px;
             max-height: 240px;
             overflow-y: auto;
             li{
                 list-style-type: none;
-                padding: .7em 2.5em;
+                padding: .8em 2.5em;
                 color: #354052;
                 width: 100%;
                 border-bottom: solid 1px #ced8e6;

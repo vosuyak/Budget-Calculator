@@ -1,4 +1,4 @@
-<h4>Income</h4>
+<h4>Gross Salary</h4>
   <div>
         <div class="row">
           <div class="income-card">
@@ -9,13 +9,13 @@
                     <label for="">Income Owner</label>                
                 </div>
                 <div class="col s6 input-field">
-                  <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" type="number"class="validate" >
+                  <input [(ngModel)]="incomes.incomeAmount" name="incomeAmount" id="incomeAmount" type="number"class="validate" >
                   <label for="">Income Amount</label>
                 </div>
             </div>
             <div class="row">
                 <div class="col s6 input-field">
-                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" type="number" class="validate"> 
+                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" id="incomePercent" type="number" class="validate"> 
                         <label for="filled-in-box">Investment %</label>                        
                 </div>
                 <div class="col s6 input-field">
@@ -47,9 +47,9 @@
           </thead>
           <tbody>
             <tr>
-              <td>{{incomeSalaryIn - incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
+              <td>{{salaryWTax | currency:'USD':true:'1.2-2'}}</td>
               <td>{{incomeWTaxesIn | currency:'USD':true:'1.2-2'}}</td>
-              <td>need</td>
+              <td>{{monthlyIncomeWTax | currency:'USD':true:'1.2-2'}}</td>
             </tr>
           </tbody>
 
