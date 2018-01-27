@@ -26,6 +26,7 @@ import { FinanceTableComponent } from './finance-table/finance-table.component';
 import { SideStatusComponent } from './side-status/side-status.component';
 import { FirstCapatializePipe } from './first-capatialize.pipe';
 import { FooterComponent } from './footer/footer.component';
+import { SeoService } from 'app/seo.service';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,7 @@ import { FooterComponent } from './footer/footer.component';
     BrowserAnimationsModule,
     routes
   ],
-  providers: [BudgetdataService],
+  providers: [BudgetdataService,SeoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

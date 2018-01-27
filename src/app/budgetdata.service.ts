@@ -59,7 +59,7 @@ export class BudgetdataService {
   }// getter monthlySummary() = monthly amount function
   public get monthlyFreeCash(){
     let freeCash = this.monthlyIncomeWTax - this.budgetSummary;
-    freeCash = freeCash - 30.82;
+    // freeCash = freeCash -;
     return freeCash;
   }// getter monthlyFreeCash() = subtracts the diffrence in the monthly summary and the budget sum
   public get salaryWTax(){

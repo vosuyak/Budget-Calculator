@@ -2,8 +2,8 @@
   <li class="user-view">
       <!-- <a href="#!name"><span class="white-text name">{{fullName.incomeOwner}}</span></a> -->
       <!-- <a href="#!email"><span class="white-text email">Your Financial Calculator</span></a> -->
-      <p class="center-align monthly-title">Total Monthly Budget </p>
-      <p class="center-align monthly-amount userpod-budget-amount">{{user.monthlyFreeCash | currency:'USD':true:'1.2-2'}}</p>
+      <p class="center-align monthly-title">Monthly Net Income</p>
+      <p *ngIf="user.incomes?.length > 0"  class="center-align monthly-amount userpod-budget-amount">{{user.monthlyFreeCash | currency:'USD':true:'1.2-2'}}</p>
   </li>
   <li><div class="divider"></div></li>
   <div class="userpod-list">

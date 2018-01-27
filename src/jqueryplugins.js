@@ -31,7 +31,6 @@ $(function(){
         }else{
             monthlyBtn.attr('disabled',true).css('opacity','1');
         }
-    }); 
-
+    });  
 });
 console.log(';log');

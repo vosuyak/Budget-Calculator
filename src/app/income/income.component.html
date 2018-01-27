@@ -1,4 +1,4 @@
-<h4>Gross Salary</h4>
+<h1>Gross Salary</h1>
   <div>
         <div class="row">
           <div class="income-card">
@@ -15,7 +15,7 @@
             </div>
             <div class="row">
                 <div class="col s6 input-field">
-                        <input max-size="2" [(ngModel)]="incomes.percentage" name="percentage" id="incomePercent" type="number" class="validate"> 
+                        <input max-size="2" size="4" [(ngModel)]="incomes.percentage" name="percentage" id="incomePercent" type="number" class="validate" placeholder="Investment Before-Tax">  
                         <label for="filled-in-box">Investment %</label>                        
                 </div>
                 <div class="col s6 input-field">
@@ -40,8 +40,8 @@
 
           <thead>
             <tr>
-                <th>Annual Income</th>
-                <th>Tax Amount</th>
+                <th>After-tax Income</th>
+                <th>Federal Tax Amount</th>
                 <th>Monthly Income</th>
             </tr>
           </thead>
@@ -56,20 +56,18 @@
           <thead>
             <tr>
                 <th>Percentage</th>
-                <th>Annual Amount</th>
-                <th>Monthly Amount</th>
+                <th>Annual Investments</th>
+                <th>Monthly Investment</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>{{investmentPercentage | percent}}</td>
               <td>{{investmentAnually | currency:'USD':true:'1.2-2'}}</td>
-              <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }}</td>
+              <td>{{investmentMonthly | currency:'USD':true:'1.2-2' }} <em class="add-to-budget"> <i class="fa fa-square" aria-hidden="true"></i> Add this to the monthly budget</em></td>
             </tr>
           </tbody>
-
         </table>
-
   </div>
   <div id="howto" class="modal">
       <div class="modal-content">

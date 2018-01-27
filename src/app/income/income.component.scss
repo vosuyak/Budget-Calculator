@@ -1,5 +1,6 @@
-h4{
+h1{
     text-align: center;
+    font-size: 1.6em;
 }
 .income-card{
     background-color: white;
@@ -24,10 +25,9 @@ h4{
 }
 .salary-container{
     margin: 4px 0;
-    background: #6f7d95;
+    background: #b7bfc9;
     padding: 1em;
     border-radius: 5px;
-    border: solid 1px #6f7d95;
     span{
         float: right;
         font-weight: bold;
@@ -66,7 +66,13 @@ h4{
         }
     }
 }
-
+.add-to-budget{
+    font-size: .8em;
+    margin-left: 10px;
+    i{
+        color: #64e164;
+    }
+}
 .investment-percent input{
     width: 100px;
     margin-left: 12px;
@@ -85,8 +91,8 @@ h4{
     display: block;
 }
 thead{
-    color: #D8DCE2;
-    background-color: #6F7D95;
+    color: #acacac;
+    background-color: #ffffff;
     th{
         border-radius: 0px;
         padding: 15px 15px;
